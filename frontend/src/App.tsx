@@ -7,6 +7,8 @@ import { Store } from './context/context-flyers';
 
 
 const App: React.FC = () => {
+  // i'm used to work with redux as a state management and Reacts HOC components, however i took advantage of this test 
+  // to experiment a bit more with new React hooks to have a simpler code as it is a best-practice
   const globalState = useContext(Store);
   const {flyers} = globalState.state 
   const [visible, setVisible] = useState(false)

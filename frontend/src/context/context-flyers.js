@@ -85,6 +85,7 @@ const initialState = {
 const Store = createContext(initialState);
 const { Provider } = Store;
 
+// a little bit of hack to separate concerns, combining states and dispatchers. Using redux i would have used combineReducers
 const StoreProvider = ( { children } ) => {
   const [pager, pagerDispatch ] = useReducer(pageReducer, { page: 1, limit: 30 })
   let localFavourites = manageStorage(null, true)
